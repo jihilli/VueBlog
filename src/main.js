@@ -3,4 +3,6 @@ import App from "./App.vue";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-createApp(App).mount("#app");
+import 라우터 from "./router";
+
+createApp(App).use(라우터).mount("#app");

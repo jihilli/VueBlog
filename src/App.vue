@@ -28,13 +28,15 @@
             <h5>React 개발자의 블로그</h5>
             <p>- Vue로 만들었음 -</p>
         </div>
-        <ListVue :data="블로그글[i]" v-for="(a, i) in 블로그글" :key="i" />
+        <!-- 라우터로 설정한 컴포넌트 보여줄 자리 -->
+        <router-view :data="블로그글[i]" v-for="(a, i) in 블로그글" :key="i"></router-view>
+        <!-- <ListVue :data="블로그글[i]" v-for="(a, i) in 블로그글" :key="i" /> -->
     </div>
 </template>
 
 <script>
 import data from "./assets/data.js";
-import ListVue from "./components/ListVue.vue";
+// import ListVue from "./components/ListVue.vue";
 
 export default {
     name: "App",
@@ -42,7 +44,7 @@ export default {
         return { 블로그글: data };
     },
     components: {
-        ListVue: ListVue,
+        // ListVue: ListVue,
     },
 };
 </script>
